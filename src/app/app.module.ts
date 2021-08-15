@@ -13,6 +13,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { AddproductsComponent } from './components/addproducts/addproducts.component';
 import { ProductcardComponent } from './components/productcard/productcard.component';
 import { environment } from 'src/environments/environment';
+import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { environment } from 'src/environments/environment';
     ProductsComponent,
     AddproductsComponent,
     ProductcardComponent,
+    ProductdetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,9 @@
   <div class="card-body">
     <h5 class="card-title">{{ productItem.name }}</h5>
     <strong>{{ productItem.price | currency: "BDT " }}</strong>
-    <p class="card-text">Description: {{ productItem.description }}</p>
+    <p class="card-text">
+      Description: {{ productItem.description | slice: 0:80 }}
+    </p>
     <p>Box Size: {{ productItem.boxsize }}</p>
     <div class="d-flex justify-content-between align-items-center">
       <div class="btn-group">
@@ -13,6 +15,7 @@
         <button
           type="button"
           class="btn btn-sm btn-outline-secondary product-btn"
+          (click)="onSelect(productItem)"
         >
           View Details
         </button>
