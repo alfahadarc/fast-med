@@ -1,6 +1,9 @@
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from '../../models/product';
+
+import { DetailsProductsService } from '../../services/details-products.service';
 
 @Component({
   selector: 'app-productcard',
@@ -10,9 +13,14 @@ import { Product } from '../../models/product';
 export class ProductcardComponent implements OnInit {
   @Input() productItem: Product;
 
-  constructor() {}
+  constructor(
+    private router: Router,
+    private detailProduct: DetailsProductsService
+  ) {}
 
-  ngOnInit(): void {
-    console.log(this.productItem);
+  ngOnInit(): void {}
+  onSelect(product: Product): void {
+    this.detailProduct.setProduct(product);
+    this.router.navigateByUrl('/products');
   }
 }
