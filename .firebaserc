@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fastmed-9602b": {
+      "hosting": {
+        "fastMed": [
+          "fastmed-9602b"
+        ]
+      }
+    }
+  }
+}
