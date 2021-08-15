@@ -1,0 +1,22 @@
+<div class="card" style="width: 18rem">
+  <img src="../../../../assets/photodemo.jpeg" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">{{ productItem.name }}</h5>
+    <strong>{{ productItem.price | currency: "BDT " }}</strong>
+    <p class="card-text">Description: {{ productItem.description }}</p>
+    <p>Box Size: {{ productItem.boxsize }}</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="btn-group">
+        <button type="button" class="btn btn-sm btn-primary product-btn">
+          Add to Cart
+        </button>
+        <button
+          type="button"
+          class="btn btn-sm btn-outline-secondary product-btn"
+        >
+          View Details
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

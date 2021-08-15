@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" formControlName="name" />
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input
+        type="tex-box"
+        class="form-control"
+        formControlName="description"
+      />
+    </div>
+    <div class="form-group">
+      <label for="price">Unit Price</label>
+      <input type="number" class="form-control" formControlName="price" />
+    </div>
+    <div class="form-group">
+      <label for="boxsize">Box Size</label>
+      <input type="number" class="form-control" formControlName="boxsize" />
+    </div>
+
+    <button type="submit" class="mt-2 btn btn-primary">Submit</button>
+  </form>
+</div>
